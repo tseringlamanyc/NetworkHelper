@@ -18,12 +18,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         applePodcast.text = podcast.collectionName
-        title = podcast.artistName
-      
+        title = podcast.primaryGenreName
     }
-    
-    
-    
     
     @IBAction func loadPressed(_ sender: UIBarButtonItem) {
         NetworkHelper.shared.performDataTask(userurl: podcast.artworkUrl600) { (result) in
